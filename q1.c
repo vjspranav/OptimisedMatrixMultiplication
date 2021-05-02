@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include<omp.h>
+#include <cilk/cilk.h>
 
 struct Matrix {
     long long int arr[5000][5000];
@@ -36,7 +37,7 @@ Matrix *matmult(long long int mat1[][5000], long long int mat2[][5000], int m, i
     #pragma omp parallel shared(result, mat1, mat2) private(i, j, k)
     {    
     #pragma omp for schedule(static)
-    for(i=0;i<m;++i){
+    cilk_for(i=0;i<m;++i){
             for(k=0;k<n;++k){
         for(j=0;j<o;++j){
                 result->arr[i][j] = result->arr[i][j] + mat1[i][k]*mat2[k][j];
