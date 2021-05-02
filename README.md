@@ -31,6 +31,8 @@ Time taken to run
 **Record**
 ![image](https://user-images.githubusercontent.com/17949836/116821640-4a9b4300-ab98-11eb-9bba-1a84563763b0.png)
 ![image](https://user-images.githubusercontent.com/17949836/116821655-5dae1300-ab98-11eb-8e0b-04898be91791.png)
+* Shows us how the operations occur at assembly level
+* Any data that missed, any that took longer to be accessed
 
 **Stat**
 ![image](https://user-images.githubusercontent.com/17949836/116821704-8c2bee00-ab98-11eb-9c5b-6a334ae419ba.png)
