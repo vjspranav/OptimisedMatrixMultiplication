@@ -29,11 +29,19 @@ As my single core optimisations were not good, I don't have proper data to compa
 Shows the number of cache misses
 
 ### gprof
+* Before Parallelisation  
+![image](https://user-images.githubusercontent.com/17949836/116822660-9dc3c480-ab9d-11eb-959b-67ea4f35b7c5.png)
+* After Parallelisation  
 ![image](https://user-images.githubusercontent.com/17949836/116821469-98fc1200-ab97-11eb-9348-552c2984c476.png)  
+
 Show the time taken by matmult function
 
 ### Time taken
+* Before Parallelisation  
 ![image](https://user-images.githubusercontent.com/17949836/116821553-f6905e80-ab97-11eb-84cf-ca879773fe18.png)  
+* After Parallelisation  
+![image](https://user-images.githubusercontent.com/17949836/116822626-6ce38f80-ab9d-11eb-924d-78c0b3e3981a.png)  
+
 Time taken to run 
 
 ### Perf  
@@ -44,6 +52,11 @@ Time taken to run
 * Any data that missed, any that took longer to be accessed  
 
 **Stat**  
-![image](https://user-images.githubusercontent.com/17949836/116821704-8c2bee00-ab98-11eb-9c5b-6a334ae419ba.png)
+* Before Parallelisation  
+![image](https://user-images.githubusercontent.com/17949836/116822686-d8c5f800-ab9d-11eb-984c-ee8a480a6030.png)
 
+![image](https://user-images.githubusercontent.com/17949836/116821704-8c2bee00-ab98-11eb-9c5b-6a334ae419ba.png)
+* After Parallelisation  
+
+We can here clearly see how huge of a difference parallelisation can make in CPU Utilisation and time taken to run 
 
