@@ -9,10 +9,19 @@
 * Changed the order of loops, so that I have less cache misses.
 * Avoided loop unrolling, as O2 optimisation handles that.
 * Using pre increment over post increment (++i/i++)
-Compiled usinfg
+* As memory limitation was not given, we focused on speed and let the memory be used.
+* Tried to improve on some single core optimisations which I could not gain.  
+
+## To Compile
+Compiled using
 ```
 gcc -fopenmp -O2 q1.c -march=native
 ```
+
+
+## Comparisions
+As my single core optimisations were not good, I don't have proper data to compare to  
+* I could notice an improvent of 10-15 seconds on a set of 1000*1000 matrices completely unoptimised vs parallel optimised  
 
 ## Performance
 ### Cachegrind
@@ -27,14 +36,14 @@ Show the time taken by matmult function
 ![image](https://user-images.githubusercontent.com/17949836/116821553-f6905e80-ab97-11eb-84cf-ca879773fe18.png)  
 Time taken to run 
 
-### Perf
-**Record**
+### Perf  
+**Record**  
 ![image](https://user-images.githubusercontent.com/17949836/116821640-4a9b4300-ab98-11eb-9bba-1a84563763b0.png)
 ![image](https://user-images.githubusercontent.com/17949836/116821655-5dae1300-ab98-11eb-8e0b-04898be91791.png)
 * Shows us how the operations occur at assembly level
-* Any data that missed, any that took longer to be accessed
+* Any data that missed, any that took longer to be accessed  
 
-**Stat**
+**Stat**  
 ![image](https://user-images.githubusercontent.com/17949836/116821704-8c2bee00-ab98-11eb-9c5b-6a334ae419ba.png)
 
 
